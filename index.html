@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Main Page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="plugins/materialize/materialize.css" media="screen,projection" />
+	<link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="canvasWrapper">
+		<canvas id="canvas-image"></canvas>
+		<div class="wrapper">
+			<h1 class="headerGradient">Budget</h1>
+		</div>
+	</div>
+
+
+	<div class="overlay"></div>
+	<div class="window">
+		<div class="example-one" data-text="ERROR">ERROR</div>
+		<div id="textWindow">Invalid input</div>
+		<a id="closeAlert" class="waves-effect waves-light btn-large">OK</a>
+
+	</div>
+
+	<div class="tongue">
+		<button class="arrow right">
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30px" height="40px" viewBox="0 0 50 80"
+			 xml:space="preserve">
+				<polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="
+					  0.375,0.375 45.63,38.087 0.375,75.8 " />
+			</svg>
+		</button>
+	</div>
+	<section class="firstPage">
+
+		<section class="FakeBalanceInfo">
+		</section>
+
+		<section class="balanceInfo ">
+			<div class="count">Current balance: </div>
+			<div id="number">0</div>
+		</section>
+
+		<section class="time">
+			<!-- <div class="wrap">
+				<button id="reset" class="waves-effect waves-light ">Reset</button>
+			</div> -->
+			<div class="wrap">
+				<div class="icon">
+					<div class="categoryMonth"></div>
+					<select name="category_select" id="month">
+						<option value="" selected>Months</option>
+					</select>
+				</div>
+				<div class="icon">
+					<div class="categoryYear"></div>
+					<select name="category_select" id="year">
+						<option value="" selected>Years</option>
+					</select>
+				</div>
+			</div>
+
+		</section>
+		<section id="flowUpSection">
+
+			<div id="pageOne">
+				<section class="list">
+
+					<div class="wrap">
+
+
+					</div>
+					<!-- <div id="noData">
+						<div class="search">
+
+						</div>
+						<span>NO MATCHES</span>
+					</div> -->
+					<ul id="list">
+
+					</ul>
+
+				</section>
+				<section class="add">
+
+					<div class="wrap icon">
+						<!-- <div contenteditable="true" id="text" placeholder="note"></div> -->
+						<div id="bar"></div>
+						<div class="noteIcon"></div>
+						<input type="text" id="text" required>
+						<label>NOTE</label>
+
+					</div>
+
+					<div class="wrap icon">
+						<div class="categoryIcon"></div>
+						<select name="categort_select" id="category">
+
+							<option value="" disabled selected hidden>CATEGORY</option>
+							<option value="utilities">Utilities</option>
+							<option value="car">Car</option>
+							<option value="food-and-drinks">Food</option>
+							<option value="groceries">Groceries</option>
+							<option value="home">Home</option>
+							<option value="phone">Phone</option>
+							<option value="entertainment">Entertaiment</option>
+							<option value="healthcare">Healthcare</option>
+							<option value="hobbies">Hobbies</option>
+							<option value="clothing">Clothing</option>
+							<option value="transport">Transport</option>
+							<option value="savings">Savings</option>
+							<option value="salary">Salary</option>
+						</select>
+						<label>CATEGORY</label>
+
+					</div>
+					<div class="wrap icon">
+						<div id="barAmount"></div>
+						<div class="valueIcon"></div>
+						<input type="text" id="amount" required>
+						<label>VALUE</label>
+
+					</div>
+
+					<div class="wrap bottomFlex">
+						<button id="editList" class="waves-effect waves-light">Edit</button>
+						<button id="add" class="waves-effect waves-light">Add</button>
+						<button id="clear" class="waves-effect waves-light">Clear </button>
+					</div>
+
+
+				</section>
+			</div>
+			<div id="pageTwo">
+
+				<div id="pie">
+
+				</div>
+			</div>
+		</section>
+	</section>
+	<div class="menu">
+		<div class="canvasWrapperBottom">
+			<canvas id="canvas-image-bottom"></canvas>
+			<div class="wrapper">
+				<button id="pageSwitcher" class="waves-effect waves-light">Switch Page</button>
+			</div>
+		</div>
+
+	</div>
+	<div class="fakeBlock"></div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<!-- <script src="https://d3js.org/d3.v4.min.js"></script> -->
+	<script src="http://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+	<script src="plugins/d3.js/d3pie.min.js"></script>
+	<script src="plugins/materialize/materialize.min.js"></script>
+	<script src="plugins/countUp/countUp.min.js"></script>
+	<script src="plugins/granim/granim.js"></script>
+	<script src="plugins/lodash/lodash.js"></script>
+	<script src="plugins/statusBar/radialprogress.js"></script>
+	<script src="js/gradient.js"></script>
+	<script src="js/modules/transaction.js"></script>
+	<script src="js/interface.js"></script>
+	<script src="js/graph.js"></script>
+	<script src="js/modules/CheckInputFields.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/main.js"></script>
+
+
+</body>
+
+</html>
