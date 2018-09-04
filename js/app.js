@@ -318,3 +318,5 @@ class App {
         textWindow.innerHTML = textToRender;
     }
 }
+
+console.log("test")
